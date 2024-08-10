@@ -6,6 +6,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from os import environ
+import uuid
 from flask import Flask, render_template
 import uuid  # Import the uuid module
 
@@ -37,7 +38,7 @@ def hbnb():
     # Generate a UUID for cache_id
     cache_id = str(uuid.uuid4())
     
-    return render_template('100-hbnb.html',
+    return render_template('0-hbnb.html',
                            cache_id=cache_id,
                            states=st_ct,
                            amenities=amenities,
